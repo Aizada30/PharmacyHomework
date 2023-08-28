@@ -63,6 +63,13 @@ public class WorkerApi {
     public Pharmacy getPhar(@RequestParam Long workerId){
        return workerService.getPharByWorkerId(workerId);
     }
+
+    @GetMapping("/getWorByPharId")
+    public List<Worker>getWorByPharId(@RequestParam Long pharmacyId){
+        return workerService.getWorByPharId(pharmacyId);
+    }
+
+
 }
 
 

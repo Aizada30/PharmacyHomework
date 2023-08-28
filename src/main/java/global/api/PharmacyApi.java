@@ -1,5 +1,6 @@
 package global.api;
 
+import global.entity.Medicine;
 import global.entity.Pharmacy;
 import global.service.PharmacyService;
 import lombok.RequiredArgsConstructor;
@@ -40,6 +41,17 @@ public class PharmacyApi {
     @GetMapping("/deletePharmacy")
     public String deletePharmacy(@RequestParam Long pharmacyId) {
         return pharmacyService.deletePharmacy(pharmacyId);
+    }
+
+    @PostMapping("/assignMedtoPhar")
+    public String assignMedToPhar(@RequestParam List<Long>pharmaciesId,
+                                  @RequestBody List<Medicine>medicinesId){
+        return pharmacyService.assignMedicineToPharmacy(pharmaciesId,medicinesId);
+    }
+
+    @GetMapping("/getByName")
+    public Pharmacy getByName(@RequestParam String name){
+       return pharmacyService.getByName(name);
     }
 
 }

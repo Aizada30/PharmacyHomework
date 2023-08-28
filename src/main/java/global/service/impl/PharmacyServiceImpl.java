@@ -57,7 +57,12 @@ public class PharmacyServiceImpl implements PharmacyService {
         List<Pharmacy> allPharmacy = pharmacyRepo.findAllById(pharmacyId);
         pharmacyRepo.saveAllAndFlush(allPharmacy);
         medicineRepo.saveAll(allMedicine);
-        return null;
+        return "Successfully saved";
+    }
+
+    @Override
+    public Pharmacy getByName(String pharmacyName) {
+        return pharmacyRepo.getByName(pharmacyName);
     }
 
 

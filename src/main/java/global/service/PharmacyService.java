@@ -14,5 +14,5 @@ public interface PharmacyService {
     Pharmacy updatePharmacy(Long pharmacyId,Pharmacy pharmacy);
     String deletePharmacy(Long pharmacyId);
     String assignMedicineToPharmacy(List<Long>pharmacyId,List<Medicine>allMedicine);
-
+    Pharmacy getByName(String pharmacyName);
 }

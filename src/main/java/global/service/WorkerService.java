@@ -16,4 +16,5 @@ public interface WorkerService {
     String assignWorkerToPharmacy(Long pharmacyId, Long worker);
     double srStaticAge(Long pharmacyId);
     Pharmacy getPharByWorkerId(Long workerId);
+    List<Worker>getWorByPharId(Long pharmacyId);
 }

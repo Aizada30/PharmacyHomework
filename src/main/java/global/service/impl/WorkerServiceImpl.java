@@ -95,5 +95,10 @@ public class WorkerServiceImpl implements WorkerService {
       return   workerRepo.getPhBYWorId(workerId);
     }
 
+    @Override
+    public List<Worker> getWorByPharId(Long pharmacyId) {
+        return  workerRepo.getWorkersByPharmacyId(pharmacyId);
+    }
+
 
 }
